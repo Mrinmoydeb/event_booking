@@ -1,0 +1,209 @@
+:root {
+    --primary: #0070f3;
+    --primary-foreground: #ffffff;
+    --secondary: #f5f5f5;
+    --secondary-foreground: #111;
+    --background: #ffffff;
+    --foreground: #111;
+    --card: #ffffff;
+    --card-foreground: #111;
+    --border: #e5e5e5;
+    --radius: 0.5rem;
+    }
+
+    body {
+    background-color: var(--background);
+    color: var(--foreground);
+    }
+.blog-card {
+    transition: transform 0.3s ease;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    }
+
+    .blog-card:hover {
+    transform: translateY(-5px);
+    }
+
+    .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    }
+
+    .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.75rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    }
+
+    .card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: var(--card-foreground);
+    opacity: 0.8;
+    }
+
+    .tags .badge {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    }
+
+    .read-more {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    border: none;
+    transition: all 0.3s ease;
+    }
+
+    .read-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .like-btn {
+    transition: all 0.3s ease;
+    }
+
+    .like-btn:hover {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    }
+
+    .like-btn.active {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+    border-color: var(--destructive);
+    }
+
+    @media (max-width: 768px) {
+    .card-title {
+    font-size: 1.1rem;
+    }
+
+    .card-text {
+    font-size: 0.9rem;
+    }
+    }
+    .seat,
+    .row-label,
+    .column-label{
+      margin: 4px;
+      display: inline-block;
+      overflow: hidden;
+    }
+
+    .row-label,
+    .column-label{
+      color: #999;
+      font-size: 12px;
+      width: 24px;
+      /* margin: 4px; */
+      text-align: center;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"]{
+      margin: 0;
+      padding: 0;
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      display: none;
+    }
+    .seat label{
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      display: block;
+      position: relative;
+      &:hover{
+        border-color: limegreen;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        transform: scale(0);
+        transition: all 150ms ease;
+      }
+    }
+    .seat input[type="checkbox"]:disabled + label{
+      border-color: darken(pink, 10%);
+      background: pink;
+      opacity: 0.66;
+      cursor: not-allowed;
+    }
+    .seat input[type="checkbox"]:checked + label{
+
+
+      &:after{
+        background-color: limegreen;
+        transform-origin: 50% 50%;
+        transform: scale(1);
+      }
+    }
+    .seats-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+
+    .custom-control {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+
+    .custom-control-label {
+        font-weight: normal;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    input[type="checkbox"][disabled] + label {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    .seat-checkbox:checked + .seat-label {
+        background-color: #28a745;
+        color: white;
+        border-color: #28a745;
+    }
+
+
+    .seat-label.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    .seat-label {
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
