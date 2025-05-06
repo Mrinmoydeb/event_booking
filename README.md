@@ -27,7 +27,7 @@ If you haven’t already installed XAMPP, download and install it from XAMPP’s
 
 Clone the project repository from GitHub:
 
-git clone https://github.com/Mrinmoydeb/event_booking.git
+git clone https://github.com/Mrinmoydeb/event_booking/tree/master
 
 4. Move the Project to XAMPP's htdocs
 
